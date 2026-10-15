@@ -205,34 +205,34 @@ namespace SistemKaryawan
     {
         static void Main(string[] args)
         {
-          
+
             Perusahaan pt = new Perusahaan("PT Maju Jaya");
 
-            
-            Manager m1 = new Manager("Budi", 15000000, 5000000);
-            Staff s1 = new Staff("Siti", 7000000, 1500000);
-            Magang mg1 = new Magang("Andi", 2000000, 6);
-            Freelancer f1 = new Freelancer("Rina", 9000000, 3);
 
-           
-            Console.WriteLine("=== MENAMBAH KARYAWAN ===");
+            Manager m1 = new Manager("Agus", 30000000, 2000000);
+            Staff s1 = new Staff("Dewi", 8000000, 1300000);
+            Magang mg1 = new Magang("Alex", 4000000, 7);
+            Freelancer f1 = new Freelancer("Zaskia", 7000000, 2);
+
+
+            Console.WriteLine("MENAMBAH KARYAWAN");
             pt.TambahKaryawan(m1);
             pt.TambahKaryawan(s1);
             pt.TambahKaryawan(mg1);
             pt.TambahKaryawan(f1);
 
-          
+
             pt.DaftarKaryawan();
 
-           
-            Console.WriteLine("\n=== POLYMORPHISM: Kerja() ===");
+
+            Console.WriteLine("\nPOLYMORPHISM: Kerja");
             foreach (Karyawan k in pt.Semua)
             {
                 k.Kerja();
             }
 
-         
-            Console.WriteLine("\n=== METHOD KHUSUS ===");
+
+            Console.WriteLine("\nMETHOD KHUSUS");
             foreach (Karyawan k in pt.Semua)
             {
                 if (k is Manager mgr)
@@ -257,7 +257,7 @@ namespace SistemKaryawan
                 }
             }
 
-            Console.WriteLine("\nTekantombol untuk keluar...");
+            Console.WriteLine("\nTekantombol untuk keluar");
             Console.ReadKey();
         }
     }
